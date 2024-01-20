@@ -1,0 +1,640 @@
+<html>
+
+<head>
+    <title>FRABPS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100%;
+            width: 100%;
+            background-color: linen;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: lightcoral;
+            overflow: auto;
+            border-radius: 0.31rem;
+            box-shadow: 0.31rem 0.31rem 0.31rem rgb(214, 244, 244);
+        }
+
+        .navbar a {
+
+            padding: 0.75rem;
+            color: cornsilk;
+            text-decoration: none;
+            font-size: 1.06rem;
+            float: none;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background-color: orangered;
+        }
+
+        .navbar-right {
+            float: right;
+        }
+
+        .register a {
+            width: 10%;
+            background-color: lightcoral;
+            color: cornsilk;
+            border-radius: 0.31rem;
+            float: left;
+            padding: 0.75rem;
+            text-decoration: none;
+            font-size: 1.06rem;
+            position: fixed;
+            top: 6.25rem;
+            left: 81.25rem;
+            z-index: 3;
+        }
+
+        div {
+            color: cornsilk;
+        }
+
+        .register a:hover {
+            background-color: orangered;
+            z-index: 300;
+        }
+
+        .img {
+            display: block;
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            object-position: center;
+            top: 2.5rem;
+            box-shadow: 0.12rem 0.12rem 0.5rem 0.31rem lightsteelblue;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 16rem;
+            left: 55rem;
+        }
+
+        div h1 {
+            color: darkred;
+            font-size: 400%;
+            font-family: cursive;
+            text-shadow: 0.12rem 0.12rem lightblue;
+        }
+
+        .logocss {
+            position: relative;
+            width: 15.62rem;
+            height: 7.5rem;
+            object-fit: contain;
+            object-position: left;
+            top: 1.25rem;
+        }
+
+        .welcome {
+            position: absolute;
+            top: 5.62rem;
+            left: 25rem;
+            color: rgb(50, 8, 55);
+            font-size: 3.7rem;
+            font-family: paytone one;
+            text-shadow: 0.12rem 0.12rem lightblue;
+            font-weight: bold;
+        }
+
+        div p {
+            color: rgb(82, 81, 81);
+            font-size: 1.75rem;
+            position: absolute;
+            top: 50rem;
+            text-align: center;
+        }
+
+        .column {
+            padding: auto;
+            top: 56.25rem;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            /* To space the columns evenly */
+            background-color: whitesmoke;
+            width: 80%;
+            top: 20.62rem;
+            box-shadow: 0.12rem 0.12rem 0.5rem 0.31rem lightsteelblue;
+            position: relative;
+            height: 25rem;
+        }
+
+        .img1 {
+            position: relative;
+            height: 18.75rem;
+            object-fit: contain;
+            object-position: center;
+            justify-content: space-around;
+            top: 0.06rem;
+        }
+
+        div h2 {
+            color: lightcoral;
+            font-size: 1.87rem;
+            padding: auto;
+        }
+
+        .row1 {
+            background-color: rgb(221, 231, 246);
+            width: 100%;
+            top: 25rem;
+            box-shadow: 0.12rem 0.12rem 0.5rem 0.31rem lightsteelblue;
+            position: relative;
+            height: 62.5rem;
+            text-align: center;
+        }
+
+        .img2 {
+            position: relative;
+            height: 21.87rem;
+            object-fit: contain;
+            object-position: right;
+            justify-content: space-between;
+            top: 1.25rem;
+        }
+
+        .row2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            /* To space the columns evenly */
+            background-color: linen;
+            width: 100%;
+            top: 25rem;
+            position: relative;
+            height: 25rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* Three columns */
+            grid-template-rows: repeat(3, 15.62rem);
+            /* Three rows, each 6.25rem tall */
+            width: 75rem;
+            /* Set a fixed width for the grid container */
+            margin: 0 auto;
+            /* Center the grid horizontally */
+            padding: 1.25rem;
+        }
+
+        /* Style the grid items */
+        .grid-item {
+            background-color: linen;
+            color: grey;
+            text-align: center;
+            font-size: 1.5rem;
+            border: 0.06rem solid rgb(236, 234, 234);
+            padding-top: 0.93rem;
+        }
+
+        /* Style the bottom content */
+        .bottom-content {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        /* Style the columns */
+        .column1 {
+            background-color: linen;
+            color: grey;
+            text-align: center;
+            padding-top: 1.87rem;
+            flex: 1;
+            margin: 0 0.31rem;
+            box-shadow: 0.12rem grey;
+        }
+
+        .faq {
+            width: 100%;
+            top: 25rem;
+            position: relative;
+            height: 28.12rem;
+            text-align: left;
+            padding-top: 3.12rem;
+            padding-bottom: 3.12rem;
+
+        }
+
+        .faq-section {
+            width: 90%;
+            margin: 0 auto;
+            padding: 1.25rem;
+
+        }
+
+        .faq-item {
+            margin-bottom: 1.25rem;
+            padding: 0.62rem;
+            border-bottom: 0.06rem solid gray;
+        }
+
+        .faq-item h3 {
+            font-size: 1.12rem;
+            color: #333;
+            margin: 0;
+        }
+
+        .icon {
+            float: right;
+            cursor: pointer;
+            transition: transform 0.2s;
+            /* Add a smooth transition effect */
+        }
+
+        button {
+            background-color: rgb(221, 223, 78);
+            color: rgb(29, 42, 3);
+            padding: auto;
+            width: 30%;
+            height: 10%;
+        }
+
+        .mblock {
+            position: relative;
+            top: 0.62rem;
+            width: 100%;
+            height: 31.25rem;
+            display: flex;
+        }
+
+        .msys {
+            position: relative;
+            width: 25%;
+            height: 20.62rem;
+            box-shadow: 0.12rem 0.12rem rgba(0, 0, 0.2, 0.10);
+        }
+
+        .msys img {
+            object-fit: cover;
+            object-position: center;
+            width: 90%;
+            height: 12.5rem;
+            border-radius: 0.62rem;
+
+        }
+
+        .row3 {
+            background-color: rgb(221, 231, 246);
+            width: 100%;
+            top: 25rem;
+            box-shadow: 0.12rem 0.12rem 0.5rem 0.31rem lightsteelblue;
+            position: relative;
+            height: 62.5rem;
+            text-align: center;
+        }
+
+        .row4 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            /* To space the columns evenly */
+            background-color: linen;
+            width: 100%;
+            top: 0.62rem;
+            position: relative;
+            height: 25rem;
+            text-align: left;
+            color: black;
+            padding: auto;
+            border-bottom: #333;
+        }
+
+        .col {
+            padding: 1.25rem;
+            padding-top: 1.25rem;
+        }
+
+        div ul li a {
+            text-decoration: none;
+            text-align: left;
+        }
+
+        .end {
+            position: absolute;
+            top: 325rem;
+            left: 75rem;
+        }
+
+       
+    </style>
+
+<body>
+    <nav> <!-- Navigation bar left -->
+        <div class="navbar">
+            <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+            <a href="#"><i class="fa fa-fw fa-phone"></i> Contact</a>
+            <a href="#"><i class="fa fa-fw fa-envelope"></i> Email</a>
+            <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+            <div class="navbar-right"> <!-- Navigation bar right -->
+                Follow Us
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/accounts/login/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/login.php"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/i/flow/login"><i class="fa fa-twitter"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="register"> <!-- fixed registeration link -->
+        <a href="registeration.html"> New Registeration</a>
+    </div>
+
+    <img class="logocss" src="logo.jpg"> <!-- Logo  -->
+    <div class="welcome">
+        Welcome To FRABPS
+    </div>
+    <div class="container"> <!-- Image and text on image -->
+        <img class="img" src="face.jpg" style="width: 100%;">
+        <div class="top-right">
+            <h1>Facial Recognition Attendance Based Payment System</h1>
+        </div>
+    </div>
+
+    <div class="pooja"> <!-- Short Info about system -->
+        <p>
+            <b>FRABPS Facial Recognition Attendance Based Payment
+                System</b></br></br>
+            A Face Recognition attendance system with mask detection, customization, & payment capabilities. The best
+            contactless COVID-safe attendance system for your organization.
+        </p>
+    </div> <!-- Division showing how system works -->
+    <center>
+        <div class="row">
+            <div class="column"> <!-- Content for the first column -->
+                <center>
+                    <h2>Mask Detection</h2>
+                    <img src="mask_detection.jpg" class="img1">
+                </center>
+            </div>
+            <div class="column"> <!-- Content for the second column -->
+                <center>
+                    <h2>Touchless, Access Control Integrated</h2>
+                    <img src="touchless_attendance.jpg" class="img1">
+                </center>
+            </div>
+        </div>
+    </center>
+    <div class="row2"> <!-- Unique Information about System-->
+        <div class="column"> <!-- Content for the first column -->
+            <h2 style="color: lightcoral; font-size: 2.12rem; padding-left: 0.62rem;">What's Unique About Our Facial
+                Recognition System?</h2>
+            <h3 style="color: rgb(79, 75, 75); font-size: 1.75rem; text-align: left; padding-left: 0.62rem;">Mask scan:</h3>
+            <h5
+                style="color: rgb(87, 84, 84); font-size: 1.25rem; text-align: left; text-overflow: clip; padding-left: 0.62rem;">
+                The system can scan and identify if the person is wearing a mask. Ensure hygiene practices are followed
+                without manual tracking.</h5>
+            <h3 style="color: rgb(79, 75, 75); font-size: 1.75rem; text-align: left; padding-left: 0.62rem;">Access control:
+            </h3>
+            <h5
+                style="color: rgb(87, 84, 84); font-size: 1.25rem; text-align: left; text-overflow: clip; padding-left: 0.62rem;">
+                The facial recognition system fully integrates with access control hardware like doors, gates, and
+                turnstiles. Therefore, if someone is found to be violating any rule, the system automatically won't
+                allow access. No manual tracking is needed.</h5>
+
+        </div>
+        <div class="column"> <!-- Content for the second column -->
+            <center> <img src="unique.jpg" class="img2"></center>
+        </div>
+    </div>
+    <div class="row1"> <!-- Features -->
+        <h2 style="font-size: 3.12rem; padding-top: 1.25rem;">Facial Recognition Attendance Based Payment System - Features
+        </h2>
+        <div class="grid-container">
+            <div class="grid-item">Touchless Attendance System
+                <div class="bottom-content">
+                    <div class="column1"><img src="Touchless-attendance.png"></div>
+                    <div class="column1"
+                        style="font-size: 1.12rem ; color: gray; text-overflow: clip; padding-top: 0.93rem; text-align: left;">
+                        VersionX face recognition device automatically records attendance. Makes organizations COVID
+                        safe.</div>
+                </div>
+            </div>
+            <div class="grid-item">Mask Scan
+                <div class="bottom-content">
+                    <div class="column1"><img src="temp-mask-scan.png"></div>
+                    <div class="column1"
+                        style="font-size: 1.12rem; color: gray; text-overflow: clip; padding-top: 0.93rem; text-align: left;">
+                        Our face recognition software detects mask on face.</div>
+                </div>
+            </div>
+            <div class="grid-item">Configurable Scaning Distance
+                <div class="bottom-content">
+                    <div class="column1"><img src="Configurable-Scanning-Distance.png"></div>
+                    <div class="column1"
+                        style="font-size: 1.12rem; color: gray; text-overflow: clip; padding-top: 0.93rem; text-align: left;">
+                        Our facial recognition software provides short and long distance (2-6 ft) readings. Distance is
+                        configurable as per your needs.</div>
+                </div>
+            </div>
+            <div class="grid-item">Choose Your Device
+                <div class="bottom-content">
+                    <div class="column1"><img src="Choose-your-solution-device.png"></div>
+                    <div class="column1"
+                        style="font-size: 1.12rem; color: gray; text-overflow: clip; padding-top: 0.93rem; text-align: left;">
+                        Our system has wide options under one product range. You can choose the features you want - only
+                        face, themal, mask scan, etc.</div>
+                </div>
+            </div>
+            <div class="grid-item">Multiple Face Detection
+                <div class="bottom-content">
+                    <div class="column1"><img src="Multiple-Face-Detection.png"></div>
+                    <div class="column1"
+                        style="font-size: 1.12rem; color: gray; text-overflow: clip; padding-top: 0.93rem; text-align: left;">
+                        We have built the system with a focus on multiple face detection. This prevents chaos in front
+                        of the kiosk at the entry points.</div>
+                </div>
+            </div>
+            <div class="grid-item">Multi-Language Capability
+                <div class="bottom-content">
+                    <div class="column1"><img src="Multi-Language-Capability.png"></div>
+                    <div class="column1"
+                        style="font-size: 1.12rem; color: gray; text-overflow: clip; padding-top: 0.93rem; text-align: left;">
+                        Our system is apt for the Indian context.</div>
+                </div>
+            </div>
+            <div class="grid-item">Flexible Screen Sizes
+                <div class="bottom-content">
+                    <div class="column1"><img src="Flexible-Screen-Sizes.png"></div>
+                    <div class="column1"
+                        style="font-size: 1.12rem; color: gray; text-overflow: clip; padding-top: 0.93rem; text-align: left;">
+                        We provide flexible display sizes as per requirements. Normally, we offer a 7 inch touchscreen
+                        tablet for our facial recognition system.</div>
+                </div>
+            </div>
+            <div class="grid-item">Automatic Hand Sanitizer
+                <div class="bottom-content">
+                    <div class="column1"><img src="automatic-hand-sanitizer.png"></div>
+                    <div class="column1"
+                        style="font-size: 1.12rem; color: gray; text-overflow: clip; padding-top: 0.93rem; text-align: left;">
+                        A contactless hand sanitizer is connected with the system and access control.</div>
+                </div>
+            </div>
+            <div class="grid-item">Easily Scalable
+                <div class="bottom-content">
+                    <div class="column1"><img src="FR-Easily-Scalable.png"></div>
+                    <div class="column1"
+                        style="font-size: 1.12rem; color: gray; text-overflow: clip; padding-top: 0.93rem; text-align: left;">
+                        Our system can scan 5000 unique faces on the edge device. Can provide options for capacity and
+                        performance up to 50000+ based on hardware.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    <div class="faq"> <!-- FAQ -->
+        <h1 style="color: rgb(50, 8, 55); font-size: 2.5rem; text-align: center;">FAQs - Face Recognition Solution</h1>
+        <div class="faq-section">
+            <div class="faq-item">
+                <h3>What is a face recognition system? <span class="icon">➕</span></h3>
+            </div>
+
+            <div class="faq-item">
+                <h3>Which organizations can benefit from a facial recognition attendance system? <span
+                        class="icon">➕</span></h3>
+            </div>
+
+            <div class="faq-item">
+                <h3>Does face recognition system provide accurate results? <span class="icon">➕</span></h3>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is face recognition customizable? <span class="icon">➕</span></h3>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is a facial recognition system a costly investment? <span class="icon">➕</span></h3>
+            </div>
+
+            <div class="faq-item">
+                <h3>Have more questions? <span class="icon">➕</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row3"> <!--More Systems made by our batch-->
+        <h2 style="font-size: 3.12rem; padding-top: 1.25rem;">--- More systems ---</h2>
+        <div class="mblock">
+            <div class="msys"><img src="school_transport.jpg">
+                <h3 style="color:  rgb(212, 17, 160);">School Bus Tranportation Management System</h3>
+                <center>
+                    <button type="submit" name="submit" value="View Details">View Details</button>
+                </center>
+            </div>
+
+            <div class="msys"><img src="hotel.jpg">
+                <h3 style="color:  rgb(212, 17, 160);">Hotel Booking Management System</h3>
+                <center>
+                    <button type="submit" name="submit" value="View Details">View Details</button>
+                </center>
+            </div>
+            <div class="msys"><img src="senti.jpg">
+                <h3 style="color: rgb(212, 17, 160);">Sentiment Analysis on Instagram Data</h3>
+                <center>
+                    <button type="submit" name="submit" value="View Details">View Details</button>
+                </center>
+            </div>
+            <div class="msys"><img src="restaurant.jpg">
+                <h3 style="color:  rgb(212, 17, 160);">Table Booking System In Restaurant</h3>
+                <center>
+                    <button type="submit" name="submit" value="View Details">View Details</button>
+                </center>
+            </div>
+        </div>
+        <div class="mblock">
+            <div class="msys"><img src="tour.jpg">
+                <h3 style="color:  rgb(212, 17, 160);">Tour Management System</h3>
+                <center>
+                    <button type="submit" name="submit" value="View Details">View Details</button>
+                </center>
+            </div>
+
+            <div class="msys"><img src="employee.jpg">
+                <h3 style="color:  rgb(212, 17, 160);">Employee Management System</h3>
+                <center>
+                    <button type="submit" name="submit" value="View Details">View Details</button>
+                </center>
+            </div>
+            <div class="msys"><img src="supermarket.jpg">
+                <h3 style="color: rgb(212, 17, 160);">Super Market Management System</h3>
+                <center>
+                    <button type="submit" name="submit" value="View Details">View Details</button>
+                </center>
+            </div>
+            <div class="msys"><img src="vehicle.jpg">
+                <h3 style="color:  rgb(212, 17, 160);">Vehicle Service Management System</h3>
+                <center>
+                    <button type="submit" name="submit" value="View Details">View Details</button>
+                </center>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="faq"> <!-- contact info-->
+        <h2
+            style="font-size: 3.12rem; padding-top: 1.25rem; text-align: center; padding-bottom: 3.12rem; border-bottom: 0.06rem solid gray;">
+            Ready to find out more?
+            </br>Drop a message. We'll make sure your time is well spent.</h2>
+        <div class="row4">
+            <div class="col">
+                <ul>
+                    <img src="logo.jpg"
+                        style="width: 12.5rem; height: 6.25rem; padding-right: 1.87rem; border-right: 0.06rem solid gray;">
+                </ul>
+            </div>
+            <div class="col">
+                <ul style=" padding-right: 3.12rem; border-right: 0.06rem solid gray;">
+                    <li><a href="#" style="font-size: 1.25rem; font-weight: bold; color: black;">Support</a></li>
+                    <li><a href="#" style="font-size: 1.25rem; font-weight: bold; color: black;">About Us</a></li>
+                    <li><a href="#" style="font-size: 1.25rem; font-weight: bold; color: black;">Contact</a></li>
+                    <li><a href="#" style="font-size: 1.25rem; font-weight: bold; color: black;">Clients</a></li>
+                    <li><a href="#" style="font-size: 1.25rem; font-weight: bold; color: black;">Join Us</a></li>
+                    <li><a href="#" style="font-size: 1.25rem; font-weight: bold; color: black;">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                    <li><a style="font-size: 1.25rem; font-weight: bold; color: black;">Contact</a></li>
+                    <li><a style="font-size: 1.25rem; font-weight: bold; color: black;">Address</a></li>
+                    <li><a style="font-size: 1.12rem; color: black;">2562, 3rd Floor, 14th Cross, 24th Main, Sector 1, HSR
+                            Layout, </br>Bengaluru 560102, India</a></li>
+                    <li><a style="font-size: 1.25rem; font-weight: bold; color: black;">Sales</a></li>
+                    <li><a style="font-size: 1.12rem; color: black;">+91 73530 9999</br>
+                            +91 86107 30231</br>
+                            contact@frabps.in</a></li>
+                    <li><a style="font-size: 1.25rem; font-weight: bold; color: black;">Support</a></li>
+                    <li><a style="font-size: 1.12rem; color: black;">+91 90717 99999</a></li>
+                    <li><a style="font-size: 1.12rem; color: black;">support@frabps.in</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="end">
+        <a href="#" style="color: black; text-decoration: none;"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/accounts/login/" style="color: black; text-decoration: none;"><i
+                class="fa fa-instagram"></i></a>
+        <a href="https://www.facebook.com/login.php" style="color: black; text-decoration: none;"><i
+                class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/i/flow/login" style="color: black; text-decoration: none;"><i
+                class="fa fa-twitter"></i></a>
+    </div>
+</body>
+
+</html>
